@@ -1,0 +1,551 @@
+﻿/* Подключаем шрифты из Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); /* загружаем внешние шрифты */
+
+
+/* ===== ОБЩИЕ НАСТРОЙКИ ===== */
+
+/* Применяется ко ВСЕМ элементам */
+* {
+    box-sizing: border-box; /* padding и border не увеличивают размер блока */
+}
+
+/* Основные настройки страницы */
+body {
+    margin: 0; /* убираем стандартные отступы браузера */
+    font-family: "Arial", sans-serif; /* основной шрифт сайта */
+    font-size: 17px; /* базовый размер текста */
+}
+
+/* главный контейнер страницы */
+main {
+    min-height: 100vh; /* минимум = вся высота экрана */
+}
+
+
+/* ===== ШАПКА САЙТА ===== */
+
+header {
+    background: #264d54; /* цвет верхней панели */
+    position: fixed; /* фиксируем сверху */
+    width: 100%; /* на всю ширину */
+    top: 0; /* прикрепляем к верху */
+    padding: 10px 15px 5px 15px; /* внутренние отступы */
+    z-index: 100; /* шапка поверх контента */
+}
+
+
+/* ===== МЕНЮ ===== */
+
+navbar {
+    margin-left: 30px; /* отступ слева */
+    margin-bottom: 10px; /* отступ снизу */
+    display: inline-block; /* элементы в одну строку */
+    overflow: auto; /* защита от выхода контента */
+}
+
+/* ссылки в меню */
+navbar a {
+    color: white; /* белый текст */
+    text-decoration: none; /* убираем подчёркивание */
+    margin-right: 20px; /* расстояние между ссылками */
+    font-size: 20px; /* размер текста */
+}
+
+/* эффект при наведении */
+navbar a:hover {
+    color: #f3deca; /* меняем цвет */
+    text-decoration: underline 1px; /* добавляем подчёркивание */
+}
+
+
+/* ===== НИЗ САЙТА ===== */
+
+footer {
+    min-height: 80px; /* высота футера */
+    background: #264d54; /* цвет фона */
+    text-align: center; /* текст по центру */
+    color: white; /* цвет текста */
+    padding-top: 35px; /* отступ сверху */
+}
+
+
+/* ===== ТЕКСТ ===== */
+
+p {
+    line-height: 150%; /* расстояние между строками */
+    text-indent: 30px; /* красная строка */
+}
+
+/* списки */
+li {
+    margin-top: 10px; /* отступ сверху */
+    padding-left: 15px; /* отступ слева */
+    list-style-image: linear-gradient(
+        hsla(280, 82%, 57%, 0.685),
+        hsla(280, 82%, 57%, 0.397)
+    ); /* кастомные маркеры */
+}
+
+/* заголовки */
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0; /* убираем верхний отступ */
+    font-family: "Arial", cursive; /* шрифт заголовков */
+}
+
+/* размер h1 */
+h1 {
+    font-size: 270%; /* большой заголовок */
+}
+
+/* размер h2 */
+h2 {
+    font-size: 200%; /* чуть меньше */
+}
+
+
+/* ===== СЕКЦИИ ===== */
+
+section {
+    padding: 90px 15%; /* отступы внутри блоков */
+}
+
+
+/* логотип */
+.logo {
+    height: 50px; /* фиксируем высоту */
+}
+
+
+/* ===== ГЛАВНАЯ СТРАНИЦА ===== */
+
+#index {
+    background: linear-gradient(
+        hsla(0, 0%, 0%, 0.582),
+        #000000bd
+    ),
+    url('../images/nacialo1.jpg'); /* фон + затемнение */
+    background-size: cover; /* растягиваем фон */
+    min-height: 100vh; /* высота экрана */
+}
+
+/* блок на главной */
+.index-info {
+    margin-top: 25vh; /* отступ сверху */
+    text-align: center; /* центрируем */
+}
+
+/* заголовок на главной */
+.index-info h1 {
+    font-size: 350%; /* очень большой текст */
+    color: white; /* цвет текста */
+    border: 2px solid gray; /* рамка */
+    display: inline-block; /* рамка по тексту */
+    padding: 20px; /* внутренний отступ */
+    border-radius: 5px; /* скругление */
+    background-color: hsla(189, 38%, 24%, 0.598); /* фон */
+}
+
+
+/* ссылки */
+.link-index {
+    color: white; /* цвет текста */
+    text-decoration: underline #fa9483 2px; /* подчёркивание */
+    font-size: 20px; /* размер */
+}
+
+/* hover эффект */
+.link-index:hover {
+    color: #fedeca; /* изменение цвета */
+}
+
+
+/* ===== КАРТОЧКИ ===== */
+
+.more-info {
+    background: linear-gradient(180deg, #f6fbfc 0%, #ffffff 100%); /* градиент */
+}
+
+/* большой блок */
+.more-info-hero {
+    background: linear-gradient(120deg, #20444a, #2f6872); /* фон */
+    color: white; /* текст белый */
+    padding: 30px; /* внутренний отступ */
+    border-radius: 14px; /* скругление */
+    margin-bottom: 28px; /* отступ снизу */
+    box-shadow: rgba(38, 77, 84, 0.28) 0px 12px 30px; /* тень */
+}
+
+
+/* ===== СЕТКА ===== */
+
+.info-grid {
+    display: grid; /* включаем grid */
+    grid-template-columns: repeat(3, minmax(220px, 1fr)); /* 3 колонки */
+    gap: 16px; /* расстояние */
+    margin: 20px 0 28px; /* внешние отступы */
+}
+
+/* карточка */
+.info-card {
+    background: #ffffff; /* белый фон */
+    border: 1px solid #d5e7ea; /* рамка */
+    border-radius: 10px; /* скругление */
+    padding: 16px; /* внутренний отступ */
+    box-shadow: rgba(100, 100, 111, 0.08) 0px 7px 22px 0px; /* тень */
+}
+
+
+/* ===== БЛОКИ ===== */
+
+.info-block {
+    margin-top: 24px; /* отступ сверху */
+    padding: 20px 22px; /* внутренний отступ */
+    background: #eef7f8; /* фон */
+    border-left: 6px solid #2f6872; /* цветная линия слева */
+    border-radius: 8px; /* скругление */
+}
+
+
+/* ===== ВИДЕО И КАРТА ===== */
+
+.vframe {
+    width: 100%; /* ширина */
+    height: 30vw; /* адаптивная высота */
+    border: 2px double #f3deca; /* двойная рамка */
+    border-radius: 5px; /* скругление */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; /* тень */
+}
+
+/* карта */
+.harta {
+    width: 100%; /* ширина */
+    height: 40vh; /* высота */
+}
+
+
+/* ===== ЛОКАЦИИ ===== */
+
+.loc {
+    overflow: auto; /* очищает float */
+    border-bottom: 3px #f3deca dashed; /* линия снизу */
+    margin-bottom: 10px; /* отступ */
+}
+
+/* картинка */
+.loc img {
+    height: 23vh; /* высота */
+    width: 23vh; /* ширина */
+    object-fit: cover; /* обрезка */
+    border-radius: 50%; /* круг */
+    float: left; /* слева */
+    margin-right: 15px; /* отступ справа */
+    margin-bottom: 15px; /* отступ снизу */
+}
+
+
+/* ===== КОНТАКТЫ ===== */
+
+.row {
+    overflow: auto; /* очистка */
+}
+
+/* колонки */
+[class^="col-"] {
+    float: left; /* слева */
+    padding: 0px 10px; /* отступ */
+}
+
+/* половина ширины */
+.col-50 {
+    width: 50%; /* 2 колонки */
+}
+
+/* блок контактов */
+.contacte {
+    border: 2px solid #f3deca; /* рамка */
+    border-radius: 5px; /* скругление */
+    background-color: #f3deca9b; /* фон */
+    padding: 5px 5%; /* отступ */
+    height: 330px; /* высота */
+}
+
+
+/* форма */
+.cform {
+    border: 2px solid #f3deca;
+    border-radius: 5px;
+    background-color: #f3deca9b;
+    padding: 5px 5%;
+}
+
+.form-note {
+    text-indent: 0;
+    margin: 0 0 14px;
+    color: #264d54;
+    font-size: 15px;
+}
+
+/* поля формы */
+.cform input,
+.cform textarea {
+    width: 100%; /* на всю ширину */
+    padding: 15px; /* отступ */
+    font-size: 15px; /* размер текста */
+    margin-bottom: 10px; /* отступ */
+}
+
+
+/* ===== БУРГЕР ===== */
+
+#hamburger {
+    color: white; /* цвет */
+    font-size: 28px; /* размер */
+    position: absolute; /* позиция */
+    right: 22px; /* справа */
+    top: 24px; /* сверху */
+    cursor: pointer; /* курсор */
+    display: none; /* скрыт */
+}
+
+
+/* ===== АДАПТИВ ===== */
+
+@media (max-width: 800px) {
+
+    body {
+        font-size: 16px; /* меньше текст */
+    }
+
+    section {
+        padding: 90px 10px; /* меньше отступ */
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr; /* 1 колонка */
+    }
+
+    navbar a {
+        display: none; /* скрываем меню */
+    }
+
+    navbar.mobile a {
+        display: block; /* показываем меню */
+        text-align: center;
+    }
+
+    #hamburger {
+        display: block; /* показываем бургер */
+    }
+}
+
+
+/* ===== ТАБЛИЦА ===== */
+
+table {
+    width: 100%; /* таблица на всю ширину */
+    border-collapse: collapse; /* убираем двойные линии */
+    background: #ffffff; /* белый фон */
+    margin-top: 20px; /* отступ сверху */
+    border-radius: 10px; /* скругление */
+    overflow: visible; /* ВАЖНО: чтобы фото не обрезалось при увеличении */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 25px; /* тень */
+}
+
+/* заголовки */
+th {
+    background: #264d54;
+    color: white;
+    padding: 15px;
+    text-transform: uppercase;
+}
+
+/* ячейки */
+td {
+    padding: 15px;
+    text-align: center;
+}
+
+/* строки при наведении */
+tr:hover td {
+    background: #f6fbfc;
+}
+
+/* ===== ФОТО ===== */
+
+table img {
+    width: 90px; /* размер фото */
+    height: 90px; /* делаем квадрат */
+    object-fit: cover; /* не искажается */
+    border-radius: 50%; /* круг */
+    border: 2px solid #264d54; /* рамка */
+    transition: all 0.3s ease; /* ПЛАВНАЯ анимация */
+    cursor: pointer; /* курсор "рука" */
+}
+
+/* эффект при наведении */
+table img:hover {
+    transform: scale(1.2); /* увеличение */
+    box-shadow: 0 0 15px rgba(38, 77, 84, 0.5); /* свечение */
+}
+
+/* ===== ЯКОРЯ ===== */
+
+.anchors {
+    text-align: center; /* центр */
+    margin-bottom: 25px; /* отступ */
+}
+
+.anchors a {
+    display: inline-block; /* кнопки */
+    margin: 5px 10px; /* расстояние */
+    padding: 10px 20px; /* размер */
+    background: #264d54; /* цвет */
+    color: white; /* текст */
+    text-decoration: none; /* убрать подчёркивание */
+    border-radius: 6px; /* скругление */
+    transition: 0.3s; /* плавность */
+}
+
+.anchors a:hover {
+    background: #3a6f77; /* hover */
+}
+
+
+/* ===== АУДИО-ПЛЕЕР ===== */
+
+.audio-widget { /* <!-- основной блок плеера --> */
+    position: fixed; /* <!-- фиксируем на экране --> */
+    right: 18px; /* <!-- отступ справа --> */
+    bottom: 18px; /* <!-- отступ снизу --> */
+    width: min(320px, calc(100vw - 24px)); /* <!-- адаптивная ширина --> */
+    background: rgba(38, 77, 84, 0.96); /* <!-- цвет фона --> */
+    color: white; /* <!-- цвет текста --> */
+    border-radius: 16px; /* <!-- скругление --> */
+    padding: 16px; /* <!-- внутренний отступ --> */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 12px 28px; /* <!-- тень --> */
+    z-index: 1200; /* <!-- поверх всего --> */
+}
+
+.audio-widget-header { /* <!-- верхняя часть --> */
+    display: flex; /* <!-- flex расположение --> */
+    align-items: center; /* <!-- выравнивание по центру --> */
+    justify-content: space-between; /* <!-- по краям --> */
+    gap: 10px; /* <!-- расстояние --> */
+    margin-bottom: 12px; /* <!-- отступ снизу --> */
+}
+
+.audio-widget-title { /* <!-- заголовок --> */
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.audio-hide-btn { /* <!-- кнопка скрытия --> */
+    border: none;
+    background: transparent;
+    color: #f3deca;
+    font-family: "Arial", sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.audio-hide-btn:hover { /* <!-- эффект при наведении --> */
+    color: white;
+}
+
+.audio-widget-controls { /* <!-- блок кнопок --> */
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.audio-btn { /* <!-- основная кнопка --> */
+    border: none;
+    border-radius: 999px;
+    padding: 9px 14px;
+    background: #fa9483;
+    color: white;
+    font-family: "Arial", sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.audio-btn:hover { /* <!-- hover кнопки --> */
+    background: #f07f6c;
+}
+
+.audio-btn-secondary { /* <!-- вторичная кнопка --> */
+    background: rgba(255, 255, 255, 0.16);
+}
+
+.audio-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.26);
+}
+
+.audio-volume-label { /* <!-- текст громкости --> */
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.audio-volume { /* <!-- ползунок --> */
+    width: 100%;
+    accent-color: #fa9483;
+}
+
+.audio-status { /* <!-- статус музыки --> */
+    margin-top: 10px;
+    font-size: 14px;
+    color: #f3deca;
+}
+
+.audio-widget-reopen { /* <!-- кнопка "показать" --> */
+    display: none;
+    width: 100%;
+    border: none;
+    border-radius: 999px;
+    padding: 10px 14px;
+    margin-top: 6px;
+    background: #fa9483;
+    color: white;
+    font-family: "Arial", sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* состояние скрытого плеера */
+.audio-widget-hidden {
+    width: auto;
+    padding: 12px;
+}
+
+/* скрываем всё кроме кнопки */
+.audio-widget-hidden .audio-widget-header,
+.audio-widget-hidden .audio-widget-controls,
+.audio-widget-hidden .audio-volume-label,
+.audio-widget-hidden .audio-volume,
+.audio-widget-hidden .audio-status {
+    display: none;
+}
+
+/* показываем кнопку обратно */
+.audio-widget-hidden .audio-widget-reopen {
+    display: block;
+    margin-top: 0;
+}
+
+/* адаптация под телефон */
+@media (max-width: 800px) {
+    .audio-widget {
+        right: 12px;
+        left: 12px;
+        bottom: 12px;
+        width: auto;
+        padding: 14px;
+    }
+
+    .audio-widget-controls {
+        flex-direction: column;
+    }
+}
+
